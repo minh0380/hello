@@ -22,7 +22,7 @@ class App extends React.Component{
   }
 
   //화면이 뜨자마자 창이 뜨게 하는 방법(실행이 자동으로 되도록)
-  //리액트 생명주기 찾아보기
+  //리액트 생명주기 찾아보기!
   componentDidMount(){
     //window.alert("mount?");
     this.click();
