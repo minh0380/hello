@@ -9,6 +9,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
+import Study from './study';
+
 class App extends React.Component{
 
   //리액트에서 전역 변수를 관리하는 방법
@@ -61,6 +63,7 @@ class App extends React.Component{
   render(){
     return(
       <div>
+        <Study/>
         <h1>Hello world!</h1>
         <h2>{this.state.count}</h2>
         <Button 
