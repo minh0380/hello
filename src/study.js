@@ -28,6 +28,25 @@ function getTitle(title){
     return title;
 }
 
+function List(){
+    return(
+        <div>
+            {list.map(function(item){
+                return(
+                    <div key={item.objectID}>
+                        <span>
+                            <a href={item.url}>{item.title}</a>
+                        </span>
+                        <span>{item.author}</span>
+                        <span>{item.num_comments}</span>
+                        <span>{item.points}</span>
+                    </div>
+                );
+            })}
+        </div>
+    )
+}
+
 //htmlFor는 HTML의 for 속성을 나타낸다.
 //HTML 속성은 카멜 케이스 표기법을 따른다. ex)className, onClick
 function Study(){
@@ -43,18 +62,7 @@ function Study(){
             <label htmlFor="search">Search: </label>
             <input id="search" type="text"></input>
             <hr/>
-            {list.map(function(item){
-                return(
-                    <div key={item.objectID}>
-                        <span>
-                            <a href={item.url}>{item.title}</a>
-                        </span>
-                        <span>{item.author}</span>
-                        <span>{item.num_comments}</span>
-                        <span>{item.points}</span>
-                    </div>
-                );
-            })}
+            <List/>
         </div>
     );
 }
