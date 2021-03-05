@@ -10,6 +10,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 import Study from './study';
+import HandlerFunc from './HandlerFunc';
 
 class App extends React.Component{
 
@@ -63,7 +64,8 @@ class App extends React.Component{
   render(){
     return(
       <div>
-        <Study/>
+        {/*<Study />*/}
+        <HandlerFunc/>
         <h1>Hello world!</h1>
         <h2>{this.state.count}</h2>
         <Button 
