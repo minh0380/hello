@@ -21,13 +21,6 @@ const HandlerFunc = () => {
         },
     ]
 
-    const [searchTerm, setSearchTerm] = React.useState('');
-
-    const handleChange = event => {
-        console.log(event.target.value);
-        setSearchTerm(event.target.value);
-    }
-
     const List = props =>
         props.list.map(item => (
             <div key={item.objectID}>
@@ -39,16 +32,32 @@ const HandlerFunc = () => {
                 <span>{item.points}</span>
             </div>
         ))
+    
+    const Search = () => {
+        const [searchTerm, setSearchTerm] = React.useState('');
+
+        const handleChange = event => {
+            console.log(event.target.value);
+            setSearchTerm(event.target.value);
+        }
+
+        return (
+            <div>
+                <label htmlFor="search">Search : </label>
+                <input id="search" type="text" onChange={handleChange}/>
+
+                <p>
+                    Searching for <strong>{searchTerm}</strong>
+                </p>
+            </div>
+        )
+    }
 
     return(
         <div>
             <h1>My Hacker Stories</h1>
-            <label htmlFor="search">Search: </label>
-            <input id="search" type="text" onChange={handleChange}/>
             
-            <p>
-                Searching for <strong>{searchTerm}</strong>
-            </p>
+            <Search />
 
             <hr/>
 
