@@ -2,6 +2,7 @@ import React from 'react';
 //import List from './study';
 
 const HandlerFunc = () => {
+    {/* 20210312 */}
     const stories = [
         {
             title: 'React',
